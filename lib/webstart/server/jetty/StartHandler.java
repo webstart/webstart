@@ -1,4 +1,4 @@
-package webrunner.server.jetty;
+package webstart.server.jetty;
 
 import java.io.IOException;
 import java.io.OutputStreamWriter;
@@ -16,7 +16,7 @@ import org.mortbay.jetty.handler.ContextHandler;
 
 public class StartHandler extends AbstractHandler 
 {
-	final static Logger __log = Logger.getLogger( StartHandler.class );	
+	final static Logger __log = Logger.getLogger( StartHandler.class );
 	
 	private JettyStart _jetty;
 	
@@ -32,9 +32,9 @@ public class StartHandler extends AbstractHandler
         
     protected void doStop()
     {
-   	   __log.info( "StartHandler.doStop called" );        	   
+   	   __log.info( "StartHandler.doStop called" );
     }
- 	   
+
     public void handle(String target, HttpServletRequest req, HttpServletResponse res, int dispatch)
             throws IOException, ServletException
    {
@@ -52,12 +52,12 @@ public class StartHandler extends AbstractHandler
 			if( webapp == null )
 			{
 				__log.error( "app (context) >>" + context + "<< could not be found" );
-				res.setStatus( HttpServletResponse.SC_CONFLICT );				
+				res.setStatus( HttpServletResponse.SC_CONFLICT );
 			}
 			else if( !webapp.isStopped() ) 
 			{
 				__log.error( "app (context) >>" + context + "<< is still running (hint: undeploy/stop first)" );
-				res.setStatus( HttpServletResponse.SC_CONFLICT );				
+				res.setStatus( HttpServletResponse.SC_CONFLICT );
 			}
 			else
 			{

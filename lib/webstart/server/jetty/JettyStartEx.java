@@ -1,8 +1,8 @@
-package webrunner.server.jetty;
+package webstart.server.jetty;
 
 import org.eclipse.swt.graphics.Image;
 
-import webrunner.utils.DesktopUtils;
+import webstart.utils.DesktopUtils;
 
 public class JettyStartEx extends JettyStart 
 {
@@ -14,7 +14,7 @@ public class JettyStartEx extends JettyStart
 	@Override
 	public void openStartPage()
 	{
-        DesktopUtils.openBrowser( _man._serverHost + "/test" );		
+        DesktopUtils.openBrowser( _man._serverHost + "/test" );
 	}
 
 	@Override
@@ -22,7 +22,7 @@ public class JettyStartEx extends JettyStart
 	{
 		// fix: return dummy image
 		return null;
-	}	
+	}
 
 	@Override
 	public Image[] createTrayImages()
@@ -45,6 +45,6 @@ public class JettyStartEx extends JettyStart
 	public void onServerStartBefore()  {}
 	@Override
 	public void onServerStartAfter()   {}
-	
-	
+
+
 } // class JettyStartEx

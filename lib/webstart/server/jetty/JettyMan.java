@@ -1,15 +1,15 @@
-package webrunner.server.jetty;
+package webstart.server.jetty;
 
 import org.apache.log4j.Logger;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 
-import webrunner.server.ServerCommand;
-import webrunner.server.ServerStatus;
-import webrunner.server.ServerStop;
-import webrunner.server.ServerMan;
-import webrunner.server.ServerTrayMan;
-import webrunner.ui.SplashScreen;
+import webstart.server.ServerCommand;
+import webstart.server.ServerStatus;
+import webstart.server.ServerStop;
+import webstart.server.ServerMan;
+import webstart.server.ServerTrayMan;
+import webstart.ui.SplashScreen;
 
 
 public class JettyMan extends ServerMan 

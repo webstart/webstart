@@ -1,4 +1,4 @@
-package webrunner.server.jetty;
+package webstart.server.jetty;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,11 +13,11 @@ import org.mortbay.jetty.handler.ContextHandler;
 import org.mortbay.jetty.nio.SelectChannelConnector;
 import org.mortbay.jetty.servlet.HashSessionIdManager;
 
-import webrunner.server.ServerCommand;
-import webrunner.server.ServerShutdownMonitor;
-import webrunner.server.ServerTrayMan;
-import webrunner.ui.SplashScreen;
-import webrunner.utils.SocketUtils;
+import webstart.server.ServerCommand;
+import webstart.server.ServerShutdownMonitor;
+import webstart.server.ServerTrayMan;
+import webstart.ui.SplashScreen;
+import webstart.utils.SocketUtils;
 
 
 public abstract class JettyStart implements ServerCommand 

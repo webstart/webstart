@@ -1,4 +1,4 @@
-package webrunner.server;
+package webstart.server;
 
 
 import java.util.List;
@@ -14,7 +14,7 @@ import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.MenuItem;
 import org.eclipse.swt.widgets.Shell;
 
-import webrunner.ui.TrayMan;
+import webstart.ui.TrayMan;
 
 public class ServerTrayMan extends TrayMan {
 
@@ -42,16 +42,16 @@ public class ServerTrayMan extends TrayMan {
 	public void starting()
 	{
 	  _trayItem.setImage( _iconStarting );
-	  _trayItem.setToolTipText( _title + " startet..." );		
+	  _trayItem.setToolTipText( _title + " startet..." );
 	}
 	
 	public void running()
 	{
 	  _trayItem.setImage( _iconRunning );
-	  _trayItem.setToolTipText( _title + " Betriebsbereit" );		  		
+	  _trayItem.setToolTipText( _title + " Betriebsbereit" );
 	}
-		
-	
+
+
 	public void buildMenu( final String serverHost, List items )  // rename to open or openMenu?
 	{
 	     final Menu menu = new Menu( _shell, SWT.POP_UP );
@@ -65,9 +65,9 @@ public class ServerTrayMan extends TrayMan {
 		 
 		  menuItem = new MenuItem( menu, SWT.PUSH );
 		  menuItem.setText( "Server beenden" );
-		  menuItem.addListener( SWT.Selection, new Listener () {			
-			public void handleEvent( Event ev ) {				
-			  _man.onExit();			  
+		  menuItem.addListener( SWT.Selection, new Listener () {
+			public void handleEvent( Event ev ) {
+			  _man.onExit();
 			}
 		  });
 		  		  

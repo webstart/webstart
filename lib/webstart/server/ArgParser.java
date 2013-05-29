@@ -1,12 +1,12 @@
-package webrunner.server;
+package webstart.server;
 
 import org.apache.log4j.Logger;
 
-import webrunner.utils.StringUtils;
+import webstart.utils.StringUtils;
 
 public class ArgParser 
 {
-	final static Logger __log = Logger.getLogger( ArgParser.class );	
+	final static Logger __log = Logger.getLogger( ArgParser.class );
 
 	private String  _port          = null;    // /PORT:<NUMBER>
        
@@ -60,7 +60,7 @@ public class ArgParser
 			// NB: allow values separated w/ : e.g. /p:4343
 
 			String parameterName;
-			String parameterValue;								
+			String parameterValue;
 
 			if( colonNdx > 0) 
 			{

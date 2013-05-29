@@ -1,4 +1,4 @@
-package webrunner.server;
+package webstart.server;
 
 
 import java.io.BufferedReader;
@@ -17,15 +17,15 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Shell;
 
-import webrunner.utils.StringUtils;
+import webstart.utils.StringUtils;
 
 
 
 public abstract class ServerMan 
 {	
-   final static Logger __log = Logger.getLogger( ServerMan.class );	
+   final static Logger __log = Logger.getLogger( ServerMan.class );
 	
-   public String _title; 	
+   public String _title;
 	
    public ServerMan( String title )
    {
@@ -63,7 +63,7 @@ public abstract class ServerMan
 			_shutdownPort = _port+1;
 		}
 		
-		__log.info( "port: " + _port + ", shutdownPort: " + _shutdownPort );				
+		__log.info( "port: " + _port + ", shutdownPort: " + _shutdownPort );
 		
 		_serverHost = "http://127.0.0.1:" + _port;
 					
