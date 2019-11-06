@@ -1,3 +1,3 @@
-# `webstart-server.jar`
+# Web Start Libraries
 
-Another simple web server (using Jetty) to run (start/stop) Java Web Apps (including JRuby on Rails).
+- [**webstart-server.jar**](webstart-server) - Another simple web server (using Jetty) to run (start/stop) Java Web Apps (including JRuby on Rails)
