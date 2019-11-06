@@ -1,0 +1,36 @@
+
+version = '1.0.0-SNAPSHOT'
+
+// aggregate all source for all-in-one javadoc
+
+
+// note: need to evaluate all subprojects to access sourceSets etc.
+
+subprojects.each { project ->
+  println "eval ${project.name}"
+  evaluationDependsOn( project.name )
+}
+
+
+task aggJavadoc(type: Javadoc) {
+    configure(options) { 
+       // overview = new File( projectDir, 'src/javadoc/package.html' ) 
+       // stylesheetFile = new File( projectDir, 'src/javadoc/stylesheet.css' ) 
+       windowTitle = 'webstart API Documentation' 
+       docTitle = "webstart API ($project.version)" 
+       bottom = "Public Domain - Use as you please with no restrictions whatsoever. <a href=\"https://github.com/webstart\">webstart Project</a>."
+       use = true 
+    }
+
+    source subprojects.collect { project ->
+        println "adding ${project.name}"
+        project.sourceSets.main.allJava
+    }
+    
+    destinationDir = new File(buildDir, 'javadoc')
+
+    // Might need a classpath
+    classpath = files( subprojects.collect { project ->
+      project.sourceSets.main.compileClasspath
+    } )
+}

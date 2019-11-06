@@ -1,0 +1,5 @@
+
+// master build script
+// note: sibling folder must be named "master" - for now there's no other way in gradle
+
+includeFlat 'webstart-utils', 'webstart-browser'
