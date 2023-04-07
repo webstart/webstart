@@ -16,6 +16,10 @@ More
 Gems  (Ruby)
 
 - [**manman**](manman) -  manifest manager (manman) calculates MD5 digests/hashes for files listed in manifest template(s)
+- [**upman**](upman) - update manager (upman)
+
+
+
 
 
 
