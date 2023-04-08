@@ -11,6 +11,10 @@ More
 
 
 
+Web Apps (JRuby)
+
+- [**links**](links) - link bookmarking & voting sample app  (in rails & sinatra editions)
+
 
 Gems  (Ruby)
 
@@ -18,9 +22,10 @@ Gems  (Ruby)
 - [**upman**](upman) - update manager (upman)
 
 
-Web Apps (JRuby)
+C# / .NET
 
-- [**links**](links) - link bookmarking & voting sample app  (in rails & sinatra editions)
+- [**upman-win**](upman-win)  - update manager for windows (upman-win)
+
 
 
 
